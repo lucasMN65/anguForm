@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Lucas } from 'src/app/models/lucas';
+import { Noticias } from 'src/app/models/noticias';
+import { NoticiasService } from 'src/app/services/noticias.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +9,17 @@ import { Lucas } from 'src/app/models/lucas';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private NoticiasService: NoticiasService) { }
+  listaNoticia = [] as Noticias[]
 
   ngOnInit(): void {
+    this.carregarNoticias()
   }
-  lucasModel = new Lucas("lucas99motta@hotmail.com", "lucas99")
 
-  onSubmit(){
-    console.log(this.lucasModel)
+  carregarNoticias() {
+    this.NoticiasService.getNoticias().subscribe( (noticiasrecebidas: Noticias[]) =>{
+      this.listaNoticia = noticiasrecebidas;
+      console.log(this.listaNoticia);
+    })
   }
 }

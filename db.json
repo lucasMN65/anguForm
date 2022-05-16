@@ -1,0 +1,28 @@
+{
+    "noticias":[
+        {
+            "id": 1,
+            "imagens": "",
+            "titulo": "chove em salvador",
+            "descrição": "o dia esta frio"
+        },
+        {
+            "id": 2,
+            "imagens": "",
+            "titulo": "chove em salvador",
+            "descrição": "o dia esta frio"
+        },
+        {
+            "id": 3,
+            "imagens": "",
+            "titulo": "chove em salvador",
+            "descrição": "o dia esta frio"
+        },
+        {
+            "id": 4,
+            "imagens": "",
+            "titulo": "dia de sol em Salvador",
+            "descrição": "O dia esta muito qunte"
+        }
+    ]
+}
